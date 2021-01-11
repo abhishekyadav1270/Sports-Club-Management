@@ -27,9 +27,13 @@ public class Member {
 	private Date dateOfMembership;
 	@Column(name="expiry_of_memebership")
 	private Date expiryOfMembership;
+	
 	@OneToMany(cascade=CascadeType.ALL)
 	private List<Game> gamesSelected;
+	
 	//TODO figure out mapping
+	//@OneToOne
+	//@JoinColumn(name="plan_id")  
 	private Plan planSelected;
  	
 	public Member() {
